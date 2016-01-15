@@ -1,0 +1,23 @@
+language: ruby
+sudo: false
+addons:
+  apt:
+    packages:
+    - gawk
+    - wget
+    - git-core
+    - diffstat
+    - unzip
+    - texinfo
+    - gcc-multilib
+    - build-essential
+    - chrpath
+    - socat
+    - libsdl1.2-dev
+    - xterm
+cache:
+  directories:
+    - $HOME/.buildroot-ccache
+script:
+- source poky/oe-init-build-env
+- bitbake core-image-minimal
