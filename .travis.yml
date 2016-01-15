@@ -17,7 +17,8 @@ addons:
     - xterm
 cache:
   directories:
-    - $HOME/.buildroot-ccache
+    - ${TRAVIS_BUILD_DIR}/build/downloads
+    - ${TRAVIS_BUILD_DIR}/build/sstate-cache
 script:
 - source poky/oe-init-build-env
 - bitbake core-image-minimal
